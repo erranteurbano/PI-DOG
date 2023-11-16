@@ -1,0 +1,177 @@
+:root {
+  --Fondo: #FAF3E0;
+  --fondo-secundario: #87CEEB;
+  --titulo: #8B4513;
+  --texto-resaltado: #FFA500;
+  --Blanco: #FFFFFF;
+
+}
+
+.Link{
+   text-decoration: none;
+}
+
+
+.principal {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Define las columnas en la cuadrícula */
+    gap: 20px; /* Espaciado entre las cartas */
+    padding: 20px; 
+    justify-content: center;
+  }
+
+  .container{
+    position: relative;
+}
+
+.container .card {
+  margin: 0;
+  position: relative;
+  width: 320px;
+  height: 450px;
+  background-color:var(--Blanco);
+  border: var(--titulo) 1px solid;
+  border-radius: 20px;
+  overflow: hidden;
+  justify-self: center;
+}
+
+.container .card:before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+ background-color: var(--fondo-secundario);
+  clip-path: circle(150px at 80% 20%);
+  transition: 0.5s ease-in-out;
+}
+
+.container .card:hover:before{
+  clip-path: circle(300px at 80% -20%);
+}
+
+.container .card:after{
+  content:attr(data-name);
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.2m;
+  font-weight: 800;
+  font-style: italic;
+  color:var(--titulo);
+  transition: 0.5s ease-in-out;
+  
+}
+
+
+.withName:after {
+  content: 'Dogs';
+}
+
+
+.container .card:hover::after{
+  top: 40%;
+  transition: 0.5s ease-in-out;
+}
+
+.container .card .imgBx{
+  position: absolute;
+  top: 30%;
+  transform: translateY(-50%);
+  z-index: 10000;
+  width: 100%;
+  height: 220px;
+  transition: 0.5s;
+}
+
+.container .card .imgBx img{
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%,-40%);
+  width: 200px;
+}
+
+.container .card .contentBX {
+  position: absolute;
+  bottom:0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: 1s;
+  z-index: 10;
+}
+
+.container .card:hover .contentBX {
+   
+  height: 210px;
+ 
+ }
+ 
+.id h3{
+  display: flex;
+  justify-content: space-between;
+  padding:1px 15px  ;
+  color: var(--titulo);
+  font-size: 1.8em;
+  font-weight: 800;
+  font-style: italic;
+
+}
+.property span{
+     position: relative;;
+     justify-content: center;
+     align-items: center;
+     padding: 8px 20px;
+     top: 145px;
+     color: var(--titulo);
+     font-size: 1.2em;
+     font-weight: 800;
+     font-style: italic;
+ }
+
+ /* Estilos para los botones de tipo */
+.tempContainer {
+  display: grid; /* Mostrar los tipos en una fila */
+  grid-template-columns: repeat(3, 1fr); /* Alinear elementos verticalmente en el centro */
+  gap: 6px;
+  justify-content: center;
+  opacity: 0; /* Inicialmente el contenedor de tipos estará oculto */
+  visibility: hidden; /* Ocultar el contenedor de tipos inicialmente */
+  position: relative;
+  
+  transition: opacity 0s ease, transform 0.3s ease, visibility 0.3s; /* Ajustar las propiedades de transición */
+}
+
+/* Animación al hacer hover en el elemento .card */
+.card:hover .tempContainer{
+  opacity: 1; /* Mostrar el contenedor de tipos al hacer hover */
+  visibility: visible;
+  top: 160px;
+  transform: translateY(0); /* Hacer que los botones "suban" al hacer hover */
+}
+
+.largeImage {
+  max-width: 35%; /* Establecer un tamaño máximo específico para imágenes grandes */
+}
+
+.extraSmallImage {
+  max-width: 40%; /* Establecer un tamaño máximo para imágenes adicionales */
+}
+
+.typeButton {
+  color:var(--Blanco); /* Color del texto dentro del botón */
+  border: none; /* Eliminar borde del botón */
+  padding: 10px 3px; /* Espaciado interno del botón */
+  margin: 5px; /* Espacio entre botones */
+  border-radius: 4px; /* Radio de borde del botón para darle forma de botón */
+  cursor: pointer; /* Cambiar cursor al pasar por encima del botón */
+ background-color: var(--fondo-secundario);
+ font-size: 0.8em;
+ font-weight: 800;
+ font-style: italic;
+}
+

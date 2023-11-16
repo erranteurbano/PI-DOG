@@ -1,0 +1,230 @@
+:root {
+  --Fondo: #FAF3E0;
+  --fondo-secundario: #87CEEB;
+  --titulo: #8B4513;
+  --texto-resaltado: #FFA500;
+  --Blanco: #fff;
+  --borde: #223971;
+
+}
+
+
+.secCabecera{
+    position: relative;
+    width: 100%;
+    min-height: 70vh;
+    padding: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background:var(--Fondo);
+  }
+  
+  
+  .Header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px; 
+    
+  }
+  
+  .Header .logo{
+    position: relative;
+    max-width: 250px;
+    bottom: 30px;
+  }
+     
+  .NavLink:hover {
+    background:var(--fondo-secundario); 
+    color:var(--titulo); 
+    border: var(--borde) 1px solid;
+    padding: 10px;
+    font-size: 1.2em;
+  }
+  
+  .content{
+     position: relative;
+     width: 100%;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     margin-top:-575px; 
+     padding: 50px;
+  }
+  
+  .content .textBox {
+    position: relative;
+    max-width: 600px;
+    padding: 20px;
+    top: 60px;
+  }
+  
+  .content .textBox h2 {
+   color:var(--titulo);
+   font-size: 3em;
+   line-height: 1.2em;
+   font-weight: 500;
+  }
+  
+  .content .textBox h2 span {
+    color:var(--texto-resaltado);
+    font-size: 1.2em;
+    font-weight: 900;
+  }
+  
+  .content .btn {
+     display: flex;
+     justify-content:flex-start;
+     align-items: center;
+     height: 100px;
+  }
+  
+  .NavLink{
+    display: inline-block;
+    margin-top:20px; 
+    background:var(--fondo-secundario); 
+    color:var(--titulo); 
+    border-radius:40px; 
+    font-weight:bold; 
+    letter-spacing:1px; 
+    text-decoration:none;
+    padding: 10px;
+    font-size: 1em;
+    position: relative;
+    top: 1px;
+  }
+  
+  .content .btn .NavLink:hover{
+    background:var(--Blanco); 
+    color:var(--fondo-secundario); 
+    border:var(--borde ) 1px solid;
+    padding: 10px;
+  }
+  
+  
+  .content .imgBox {
+    width: 500px; /* Reducimos el ancho de .imgBox a 450px */
+    margin-right: 150px; /* Agregamos un margen derecho de 30px para separar del lado derecho */
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente dentro de .imgBox */
+    box-sizing: border-box; /* Incluye el margen dentro del ancho especificado */
+    height:440px;
+    padding:20px;
+  }
+  
+  .content .imgBox img {
+    width: 100%;
+    max-width: 100%;
+    height: auto; /* Esto asegura que la altura se ajuste proporcionalmente al ancho */
+  }
+  
+  
+  .sci {
+    position: relative; /* Cambia a "fixed" en lugar de "absolute" para que se quede en el borde */
+    top: 50%;
+    right: 60px; /* Ajusta esta propiedad para que los iconos no se desplacen más allá del borde derecho */
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Alinea los iconos verticalmente en el centro */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    
+  }
+  
+  .sci li {
+    margin: 5px 0;
+  }
+  
+  .sci li a {
+    display: inline-block;
+    filter: invert(1);
+  }
+  
+  .sci li a img {
+    width: 30px; /* Ajusta este valor para disminuir el tamaño del icono */
+    height: 30px; /* Ajusta este valor para disminuir el tamaño del icono */
+  }
+  
+  
+  .circle{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:var(--fondo-secundario);
+    clip-path: circle(800px at right 900px); 
+  }
+  
+  @media(max-width: 991px){
+  
+    .Header .logo{
+      max-width: 200px;
+    }
+  
+    .Header .NavLink{
+      display: none;
+    }
+  
+    .secCabecera{
+      padding: 20px;
+    }
+  
+    .content{
+      flex-direction: column;
+      margin-top: -650px;
+  
+    }
+  
+    .content .textBox h2 {
+      font-size: 1.9em;
+      margin-bottom: 15px;
+      margin-right: 20px;
+      padding: 10px 10px 15px 5px;
+      
+    }
+  
+    .content .textBox p {
+      font-size: 1.2em;
+      margin-bottom: 15px;
+      margin-right: 20px;
+      padding: 10px 80px 15px 5px;
+    }
+    
+    .content .textBox {
+      max-width: 100%;
+    }
+    .content .imgBox{
+      max-width: 100%;
+      justify-content: center;
+    }
+    .content .imgBox img{
+      max-width: 300px;
+      
+      
+    }
+    .circle{
+       clip-path:circle(600px at center bottom);
+       top: 750px;
+    }
+  
+  
+    .sci{ 
+        right: -385px;
+        top: -350px;
+        padding: 10px;
+        margin-right: 20px;
+        background-color: var(--Fondo);
+        transform: translateY(-50%);
+        border-top-left-radius: 5px;
+        border-bottom-left-radius:5px;
+    }
+  
+  }

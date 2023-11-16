@@ -1,0 +1,172 @@
+:root {
+    --Fondo: #FAF3E0;
+    --fondo-secundario: #87CEEB;
+    --titulo: #8B4513;
+    --texto-resaltado: #FFA500;
+    --Blanco: #fff;
+    --borde: #223971;
+    --hover-input : #999;
+  
+  }
+
+
+/* Details.module.css */
+.secCabecera {
+    position: relative;
+    width: 100%;
+    padding: 20px 0;
+    
+  }
+  
+  .Header {
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+  }
+  
+  .logo {
+    max-width: 150px;
+  }
+  
+  .logoContainer {
+    margin-right: auto; /* Empuja el logo hacia el extremo izquierdo */
+  }
+  
+  .NavLinks {
+    display: flex;
+    align-items: center;
+  }
+  
+  .NavLink {
+    background-color:var(--fondo-secundario);
+    border-radius: 20px;
+    padding: 8px 12px;
+    margin-right: 10px;
+    text-decoration: none;
+    color:var(--Blanco);
+    font-size: 0.8em;
+    font-weight: 800;
+    font-style: italic;
+  }
+  
+  .NavLink:hover {
+    background: var(--Blanco);
+    color: var(--titulo);
+    border:var(--borde) 1px solid;
+  }
+  
+  .searchContainer {
+    display: flex;
+    align-items: center;
+  }
+  
+  .search {
+    padding: 8px 10px;
+    border-radius: 70px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+  }
+  
+  .btn {
+    margin-left: 10px;
+    padding: 10px 20px;
+    background-color:var(--fondo-secundario);
+    color:var(--Blanco);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 0.8em;
+    font-weight: 800;
+    font-style: italic;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: var(--Blanco);
+    color: var(--titulo);
+    border: var(--borde) 1px solid;
+  }
+  
+  .rest{
+   background:var(--fondo-secundario);
+   border: none;
+   font-size: 1em;
+   font-weight: 800;
+   font-style: italic;
+   color: var(--Blanco);
+   padding: 4px 8px;
+  }
+
+  .rest:hover {
+    color: var(--titulo);
+    background-color: var(--Blanco);
+  }
+
+
+  /* Estilos base para el elemento select */
+  select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: #f2f2f2;
+    border: 2px solid #ccc;
+    border-radius: 5px; /* Mantenemos el borde redondeado para el contenedor del select */
+    padding: 8px;
+    margin-right: 10px;
+    font-size: 16px;
+    width: 150px;
+    height: 40px;
+    outline: none;
+    cursor: pointer;
+  }
+  
+  /* Estilos al enfocar el select */
+  select:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px #007bff;
+  }
+  
+  /* Estilos cuando se coloca el cursor sobre el select */
+  select:hover {
+    border-color: #999;
+  }
+  
+  /* Estilos para la barra desplegable (eliminar bordes redondeados) */
+  select::-ms-expand {
+    display: none; /* Oculta la flecha de despliegue en Internet Explorer */
+  }
+  
+  /* Estilos para los márgenes a los lados */
+  .select-container {
+    margin: 10px;
+  }
+  
+  
+  /* Estilos base para el elemento input */
+  input {
+    background-color: #f2f2f2;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    width: 300px;
+    outline: none;
+  }
+  
+  /* Estilos al enfocar el input */
+  input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px #007bff;
+  }
+  
+  /* Estilos cuando se coloca el cursor sobre el input */
+  input:hover {
+    border-color:var(--hover-input) ;
+  }
+  
+  /* Estilos para los márgenes a los lados */
+  .input-container {
+    margin: 10px;
+  }
+  

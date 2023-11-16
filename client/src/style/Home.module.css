@@ -1,0 +1,13 @@
+.container {
+    display: flex;
+    justify-content: space-between; /* Distribuir los componentes a la izquierda y a la derecha */
+  }
+  
+  .left {
+    flex: 1; /* Ocupar el espacio a la izquierda */
+  }
+  
+  .right {
+    flex: 1; /* Ocupar el espacio a la derecha */
+  }
+  

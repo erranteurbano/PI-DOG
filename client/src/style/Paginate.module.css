@@ -1,0 +1,55 @@
+/* Paginate.module.css */
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .pageButton {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px; /* Ajusta el ancho según tu preferencia */
+    height: 50px; /* Ajusta el alto según tu preferencia */
+    margin: 5px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .pageButton:hover {
+    background-color: #ccc;
+  }
+  
+  .currentPage {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0 10px;
+  }
+  
+  .pageNumbersContainer {
+    display: flex; /* Cambiamos a una fila */
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .pageNumber {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px; /* Ajusta el ancho según tu preferencia */
+    height: 50px; /* Ajusta el alto según tu preferencia */
+    margin: 5px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .pageNumber.active {
+    background-color: #007bff;
+    color: #fff;
+  }

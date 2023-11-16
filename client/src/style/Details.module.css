@@ -1,0 +1,94 @@
+/* Details.module.css */
+:root {
+  --Fondo: #FAF3E0;
+  --fondo-secundario: #87CEEB;
+  --titulo: #8B4513;
+  --texto-resaltado: #FFA500;
+  --Blanco: #FFFFFF;
+  --sombra:  rgba(0, 0, 0, 0.5);
+
+}
+/* Details.module.css */
+
+.container {
+  max-width: 72%;
+  margin: auto;
+  height: 60vh;
+  margin-top: 5%;
+  background:var(--Blanco);
+  box-shadow: 5px 5px 10px 3px var(--sombra);
+  flex-grow: 1; /* Ocupa todo el espacio disponible */
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+}
+
+.left {
+  flex: 1;
+}
+
+.rigth {
+  flex: 1;
+}
+
+.main_image {
+  width: 100%;
+  height: 100%; /* Ajusta el alto al del contenedor */
+}
+
+.dogs_image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Asegura que la imagen cubra todo el espacio disponible */
+}
+
+.dog_detail {
+  padding: 10px;
+  text-align: left;
+  flex-grow: 1; /* Ocupa todo el espacio disponible */
+}
+
+.dogs_stats {
+  margin-bottom: 22px;
+  font-size:1.2em;
+  font-weight: 800;
+  font-style: italic;
+  color: var(--titulo);
+}
+
+
+.tempContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  flex-grow: 1; /* Ocupa todo el espacio disponible */
+}
+
+.tempButton {
+  margin-right: 1px;
+  margin-bottom: 5px;
+  font-size:0.8em;
+  font-weight: 800;
+  font-style: italic;
+  margin-left: 6px;
+  background-color: var(--fondo-secundario);
+  padding: 10px;
+  border-radius: 20px;
+  color: var(--Blanco);
+}
+
+.cargando {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size:3em;
+  font-weight: 800;
+  font-style: italic;
+  color: var(--fondo-secundario);
+  position: relative;
+  top: 140px;
+  left: 50px;
+
+}
